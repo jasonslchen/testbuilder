@@ -8,7 +8,6 @@
 //   2. The number of digits in the number (called the length)
 
 var detectNetwork = function(cardNumber) {
-  debugger;
   let length = cardNumber.toString().length;
   let firstTwo = Number(cardNumber.toString().split('').slice(0, 2).join(''));
   if (length === 14 && (firstTwo === 38 || firstTwo === 39)) {
