@@ -23,7 +23,3 @@ var detectNetwork = function(cardNumber) {
   // The American Express network always starts with a 34 or 37 and is 15 digits long
 
   // Once you've read this, go ahead and try to implement this function, then return to the console.
-console.log(detectNetwork('38345678901234'));
-console.log(detectNetwork('39345678901234'));
-console.log(detectNetwork('343456789012345'));
-console.log(detectNetwork('373456789012345'));
