@@ -25,6 +25,10 @@ var detectNetwork = function(cardNumber) {
     return 'MasterCard';
   } else if ((length === 13 || length === 16 || length === 19) && firstTwo[0] === '4') {
     return 'Visa';
+  } else if ((length === 16 || length === 19) && (cardNumber.slice(0, 4) === '6011' || (cardNumber.slice(0, 3) >= '644' && cardNumber.slice(0, 3) <= '649') || firstTwo === '65' )) {
+    return 'Discover';
+  } else if ((length >= 12 && length <= 19) && (cardNumber.slice(0, 4) === '5018' || cardNumber.slice(0, 4) === '5020' || cardNumber.slice(0, 4) === '5038' || cardNumber.slice(0, 4) === '6304')) {
+    return 'Maestro';
   }
 };
 
