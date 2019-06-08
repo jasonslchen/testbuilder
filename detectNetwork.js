@@ -24,7 +24,7 @@ var detectNetwork = function(cardNumber) {
   } else if (length === 16 && (firstTwo === '51' || firstTwo === '52' || firstTwo === '53' || firstTwo === '54' || firstTwo === '55')) {
     return 'MasterCard';
   } else if (cardNumber[0] === '4') {
-    if ((cardNumber.slice(1, 4) === '903' || cardNumber.slice(1, 4) === '905' || cardNumber.slice(1, 4) === '911' || cardNumber.slice(1, 4) === '936') && (length === 16 || length === 19 || length --- 18)) {
+    if ((cardNumber.slice(1, 4) === '903' || cardNumber.slice(1, 4) === '905' || cardNumber.slice(1, 4) === '911' || cardNumber.slice(1, 4) === '936') && (length === 16 || length === 19 || length === 18)) {
       return 'Switch';
     } else if (length === 13 || length === 16 || length === 19) {
       return 'Visa';
